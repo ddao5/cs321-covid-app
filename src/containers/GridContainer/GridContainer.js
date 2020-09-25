@@ -21,6 +21,12 @@ const gridContainer = (props) => {
         <div>
           <Card title="Global Confirmed" content="30,397,759" />
         </div>
+        <div>
+          <Card title="Global Confirmed" content="30,397,759" />
+        </div>
+        <div>
+          <Card title="Global Confirmed" content="30,397,759" />
+        </div>
       </div>
     </div>
   );
