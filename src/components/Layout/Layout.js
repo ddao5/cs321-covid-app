@@ -21,7 +21,9 @@ class Layout extends Component {
       <>
         <Toolbar burgerButtonClicked={this.toggleSideDrawerHandler} />
         <SideDrawer open = {this.state.showSideDrawer} closed = {this.sideDrawerClosedHandle} />
-        <main className={classes.Content}></main>
+        <main className={classes.Content}>
+          {this.props.children}
+        </main>
       </>
     );
   }

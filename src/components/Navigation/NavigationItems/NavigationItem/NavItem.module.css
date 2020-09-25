@@ -29,15 +29,14 @@
     border-bottom: 4px solid transparent;
   }
   .NavItem a:hover {
-    background-color: #e98074;
+    background-color: rgba(136, 96, 208,0.2);
     transition: background-color 250ms ease-in-out;
   }
   .NavItem a:active,
   .NavItem a.active {
-    border-bottom: 4px solid #40a4c8;
-    background-color: #e85a4f;
-    color: #0f0f0f;
-    transition: background-color 500ms ease-in-out;
-    transition: border-bottom 500ms ease-in-out;
+    border-bottom: 4px solid #092c74;
+    background-color:  rgba(136, 96, 208,1);
+    color: #fff;
+    transition: border-bottom 750ms ease-in-out;
   }
 }

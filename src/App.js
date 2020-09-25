@@ -1,9 +1,12 @@
 import React from "react";
 import Layout from "./components/Layout/Layout";
+import GridContainer from "./containers/GridContainer/GridContainer";
 function App() {
   return (
     <div>
-      <Layout></Layout>
+      <Layout>
+        <GridContainer />
+      </Layout>
     </div>
   );
 }

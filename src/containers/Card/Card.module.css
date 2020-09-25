@@ -1,0 +1,13 @@
+.Card {
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding-right: 1em;
+  font-size: 1.25em;
+}
+.Card p:first-child {
+  color: #092c74;
+}
+.Card p:last-child {
+  color: #226fb7;
+}
