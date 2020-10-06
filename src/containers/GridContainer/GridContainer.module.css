@@ -1,19 +1,22 @@
 .GridContainer {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr minmax(auto,35em);
+  grid-template-rows: 1fr minmax(auto,40em);
   grid-template-areas: 
-    ". h h"
+    "h h h"
     "s m m";
   height: 100%;
   margin: 2em 2em;
+  -webkit-box-shadow: 0 8px 6px -6px  #092c74;
+  -moz-box-shadow: 0 8px 6px -6px  092c74;
+       box-shadow: 0 8px 6px -6px #092c74;
+
 }
 .Header {
-  font-size: 1.25em;
+  font-size: 2em;
   grid-area: h;
   justify-self: center;
   align-self: center;
-  border-bottom: 1px solid rgba(148, 201, 249);
   color: #092c74;
 }
 .Main {
@@ -27,7 +30,7 @@
 .Side div {
   border-bottom: 1px solid rgba(148, 201, 249, 0.5);
 }
-@media (max-width: 499px) {
+@media (max-width: 650px) {
    .GridContainer {
      grid-template-columns: 1fr;
      grid-template-rows: 2fr 1fr 3fr;
@@ -47,5 +50,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
    }
 }

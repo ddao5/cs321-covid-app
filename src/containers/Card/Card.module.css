@@ -5,6 +5,9 @@
   padding-right: 1em;
   font-size: 1.25em;
 }
+.Card p{
+  padding:0;
+}
 .Card p:first-child {
   color: #092c74;
 }
