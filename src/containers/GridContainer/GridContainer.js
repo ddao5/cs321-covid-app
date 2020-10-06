@@ -7,7 +7,7 @@ const gridContainer = (props) => {
   return (
     <div className={classes.GridContainer}>
       <div className={classes.Header}>
-        <p>Virignia County Map in Total Confirmed Cases</p>
+        <p>Virginia County Map in Total Confirmed Cases</p>
       </div>
       <div className={classes.Main}>
         <Map mapData = {props.dataCounties} maxTotalCases={props.maxTotalCases}
