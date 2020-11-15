@@ -4,7 +4,8 @@ const card = (props) => {
   return (
     <div className={classes.Card}>
       <p>{props.title}</p>
-      <p>{props.content}</p>
+      <p className={classes.Number}>{props.content}</p>
+      <hr></hr>
     </div>
   );
 };

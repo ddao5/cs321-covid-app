@@ -13,7 +13,7 @@ class App extends Component {
     totalDeathUS: 0,
     maxTotalCases: 0,
     minTotalCases: Infinity,
-    fetching: true,
+    fetching: true
   };
   componentDidMount() {
     let localityURL = `https://data.virginia.gov/resource/bre9-aqqr.json?$where=report_date == '${this.getTime(
@@ -38,8 +38,8 @@ class App extends Component {
         //convert all fetched data into this component's state
         for (let i = 0; i < responseLocality.data.length; i++) {
           let county = {
-            id: responseLocality.data[i].fips,
-            name: responseLocality.data[i].name,
+            id: +responseLocality.data[i].fips,
+            name: responseLocality.data[i].locality,
             value: +responseLocality.data[i].total_cases,
             totalDeaths: +responseLocality.data[i].deaths,
           };
@@ -55,7 +55,6 @@ class App extends Component {
           }
           dataCounties.push(county);
         }
-        console.log(responseUS.data);
         this.setState({
           dataCounties: dataCounties,
           totalCasesVA: totalCasesVA,
@@ -97,7 +96,9 @@ class App extends Component {
     }
     return time;
   };
+
   render() {
+
     return (
       <div>
         {this.state.fetching ? (

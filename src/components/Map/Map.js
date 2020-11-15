@@ -11,7 +11,7 @@ class Map extends Component {
     am4core.useTheme(am4themes_animated);
     let map = am4core.create("chartdiv", am4maps.MapChart);
     //do not allow dragging the mapp
-    map.seriesContainer.draggable = false;
+    // map.seriesContainer.draggable = false;
     //creates intial fade-in
     map.hiddenState.properties.opacity = 0;
     //set map definition
