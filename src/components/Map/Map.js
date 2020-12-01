@@ -1,13 +1,29 @@
 import React, { Component } from "react";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
+
 import am4geodata_region_usa_vaLow from "@amcharts/amcharts4-geodata/region/usa/vaLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import classes from "./Map.module.css";
+import ChartModal from "../ChartModal/ChartModal";
+
+
 
 class Map extends Component {
+  state = {
+    show: false,
+    county: "none"
+
+  };
+  showModal = e => {
+    this.setState((state, props) => ({
+      show: !this.state.show
+      }));
+  };
+  
   map = null;
   componentDidMount() {
+    
     am4core.useTheme(am4themes_animated);
     let map = am4core.create("chartdiv", am4maps.MapChart);
     //do not allow dragging the mapp
@@ -85,9 +101,34 @@ class Map extends Component {
     button.icon.path =
       "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
     this.map = map;
+
+    // Modal open when you click on a County
+    polygonTemplate.events.on("hit", ev =>{
+      // zoom to an object
+
+     // pass county name as prop to the modal
+     this.showModal();
+     this.setState((state, props) => ({
+      county: ev.target.dataItem.dataContext.name,
+      }));
+
+    });
+  
   }
   render() {
-    return <div id="chartdiv" className={classes.Map}></div>;
+
+    return (
+      <div id="chartdiv" className={classes.Map}>
+      <ChartModal onClose={this.showModal} 
+      show={this.state.show}
+      onHide={this.showModal}
+      county={this.state.county}>
+         
+      </ChartModal>
+    </div>
+  
+    );
+    
   }
 }
 
