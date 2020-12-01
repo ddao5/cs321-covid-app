@@ -1,0 +1,45 @@
+.SearchBox {
+    width: 100%;
+}
+.SearchBox input {
+    width: 50%;
+    height: 2em;
+    border: none;
+    font-family:  Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 0.8em;
+    margin-right: 0.5em;
+}
+.SearchBox input:focus {
+    position: relative;
+    z-index: 100;
+}
+.SearchBox ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+}
+.SearchBox ul::before {
+    content: "";
+}
+.SearchBox li {
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.SearchBox ul li {
+    font-size: 0.8em;
+}
+.SearchBox li:hover {
+    text-decoration: underline;
+}
+.SearchBox button {
+    height: 2em;
+    background: none;
+    border: none;
+    outline: none;
+}

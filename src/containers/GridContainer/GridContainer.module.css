@@ -1,55 +1,76 @@
 .GridContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr minmax(auto,40em);
-  grid-template-areas: 
-    "h h h"
-    "s m m";
-  height: 100%;
-  margin: 2em 2em;
-  -webkit-box-shadow: 0 8px 6px -6px  #092c74;
-  -moz-box-shadow: 0 8px 6px -6px  092c74;
-       box-shadow: 0 8px 6px -6px #092c74;
-
+  height: 80vh;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 0.8fr 0.5fr repeat(4, 1.5fr);
+  grid-template-areas:
+    "title title"
+    "s ."
+    "card1 map"
+    "card2 map"
+    "card3 map"
+    "card4 map";
+  -webkit-box-shadow: 0 8px 6px -6px #092c74;
+  -moz-box-shadow: 0 8px 6px -6px #092c74;
+  box-shadow: 0 8px 6px -6px #092c74;
 }
 .Header {
-  font-size: 2em;
-  grid-area: h;
+  font-size: 1.5em;
+  grid-area: title;
   justify-self: center;
   align-self: center;
   color: #092c74;
 }
-.Main {
-  grid-area: m;
-}
-.Side {
+.Search {
   grid-area: s;
-  justify-self: center;
-  align-self: center;
+  padding-left: 2em;
 }
-.Side div {
-  border-bottom: 1px solid rgba(148, 201, 249, 0.5);
+.Main {
+  grid-area: map;
+}
+.Card1 {
+  grid-area: card1;
+  padding-left: 2em;
+}
+.Card2 {
+  grid-area: card2;
+  padding-left: 2em;
+}
+.Card3 {
+  grid-area: card3;
+  padding-left: 2em;
+}
+.Card4 {
+  grid-area: card4;
+  padding-left: 2em;
 }
 @media (max-width: 650px) {
-   .GridContainer {
-     grid-template-columns: 1fr;
-     grid-template-rows: 2fr 1fr 3fr;
-     grid-template-areas: 
+  .GridContainer {
+    grid-template-columns: 2fr;
+    grid-template-rows: repeat(4, 0.2fr) 0.15fr 0.1fr 1.2fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "title"
       "s"
-      "h"
-      "m";
-      font-size: 0.8em;
-   }
-   .Side {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     grid-template-rows: auto auto;
-
-   }
-   .Header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      "map";
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 0.8em;
+  }
+  .Card1 {
     text-align: center;
-   }
+  }
+  .Card2 {
+    text-align: center;
+  }
+  .Card3 {
+    text-align: center;
+  }
+  .Card4 {
+    text-align: center;
+  }
 }

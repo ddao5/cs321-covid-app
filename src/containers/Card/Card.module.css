@@ -1,9 +1,9 @@
 .Card {
-  width: auto;
   height: 100%;
+  width: auto;
   margin: 0;
   padding-right: 1em;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 .Card p{
   padding:0;
@@ -11,6 +11,12 @@
 .Card p:first-child {
   color: #092c74;
 }
-.Card p:last-child {
+.Number {
   color: #226fb7;
+}
+
+hr {
+  border: 0; 
+  height: 1px; 
+  background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #2874de, #f0f0f0);
 }
