@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from "./components/Layout/Layout";
 import GridContainer from "./containers/GridContainer/GridContainer";
 import dayjs from "dayjs";
