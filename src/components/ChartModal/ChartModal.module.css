@@ -1,7 +1,8 @@
-
-.ChartModal {
-  width: 90vw;
-  max-width: 90vw;
-  height: 90vw;
-  
+.Chart {
+  width: 100%;
+  height: 200px;
+}
+.Container {
+  width: 100%;
+  height: 100%;
 }

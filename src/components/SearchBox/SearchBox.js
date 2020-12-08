@@ -9,6 +9,13 @@ class SearchBox extends Component {
     }
     onTextChanged = (e) => {
         const value = e.target.value;
+        for(let i = 0; i < value.length; ++i) {
+            let char = value.charAt(i);
+            if(char === '\\'|| char === '?') {
+                this.setState({suggestions: "", text:value});
+                return;
+            }
+        }
         let suggestions = [];
         if(value.length > 0) {
             const regex = new RegExp(`^${value}`, "i");

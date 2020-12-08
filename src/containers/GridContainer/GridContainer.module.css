@@ -63,14 +63,30 @@
   }
   .Card1 {
     text-align: center;
+    height: 25vh;
   }
   .Card2 {
     text-align: center;
+    height: 25vh;
   }
   .Card3 {
     text-align: center;
+    height: 25vh;
   }
   .Card4 {
     text-align: center;
+    height: 25vh;
   }
+  .Header {
+    height: 10h;
+  }
+  .Search {
+    height: 10vh;
+    justify-self: center;
+    align-self: center;
+  }
+  .Main {
+    height: 70vh;
+  }
+
 }

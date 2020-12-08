@@ -5,7 +5,8 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 import classes from "./GridContainer.module.css";
 
 const gridContainer = (props) => {
-  const names = props.dataCounties.map(county => county.name);
+  const names = props.dataCounties.map((county) => county.name);
+  console.log(props.time)
   return (
     <div className={classes.GridContainer}>
       <div className={classes.Header}>
@@ -20,7 +21,9 @@ const gridContainer = (props) => {
       </div>
       <div className={classes.Search}>
         {/* <p>Search</p> */}
-        <SearchBox items = {names}/>
+        <SearchBox 
+        items={names}
+        />
       </div>
       <div className={classes.Card1}>
         <Card
@@ -28,6 +31,7 @@ const gridContainer = (props) => {
           content={props.totalCasesUS
             .toString()
             .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+          time={props.time}
         />
       </div>
       <div className={classes.Card2}>
@@ -36,6 +40,7 @@ const gridContainer = (props) => {
           content={props.totalDeathUS
             .toString()
             .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+          time={props.time}
         />
       </div>
       <div className={classes.Card3}>
@@ -44,6 +49,7 @@ const gridContainer = (props) => {
           content={props.totalCasesVA
             .toString()
             .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+          time={props.time}
         />
       </div>
       <div className={classes.Card4}>
@@ -52,6 +58,7 @@ const gridContainer = (props) => {
           content={props.totalDeathVA
             .toString()
             .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+          time={props.time}
         />
       </div>
     </div>
